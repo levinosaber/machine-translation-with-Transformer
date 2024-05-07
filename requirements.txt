@@ -1,0 +1,7 @@
+fr-core-news-sm @ https://github.com/explosion/spacy-models/releases/download/fr_core_news_sm-3.3.0/fr_core_news_sm-3.3.0-py3-none-any.whl#sha256=78de7071c4989733c9c08469d7b9b01b79ec7feadc9129a07f4fde0db128e036
+en-core-web-sm @ https://github.com/explosion/spacy-models/releases/download/en_core_web_sm-3.3.0/en_core_web_sm-3.3.0-py3-none-any.whl#sha256=84d7d8059bfbf53c09b39139782f76cd6ac7064851e7799dcc685c06ebf5fd4f
+torch==1.13.0+cu117
+torchtext==0.14.0
+spacy == 3.3.3
+pandas == 2.0.3
+scikit-learn == 1.3.2

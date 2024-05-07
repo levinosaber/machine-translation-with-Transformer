@@ -1,0 +1,19 @@
+{
+    "src_lang":"fr",
+    "tgt_lang":"en",
+    "file_prefix":"transformer_basd_translation_model",
+    "distributed": false,
+    "batch_size": 16,
+    "d_model": 512,
+    "d_ff":2048,
+    "heads":8,
+    "dropout":0.1,
+    "num_workers": 4,
+    "num_epochs": 10,
+    "max_padding": 128,
+    "base_lr": 0.0001,
+    "warmup": 4000,
+    "accum_iter": 1,
+    "wait_epochs":5,
+    "load_data_lines": 30000
+}

@@ -2,6 +2,9 @@
     "src_lang":"fr",
     "tgt_lang":"en",
     "file_prefix":"transformer_basd_translation_model",
+    "src_file_path":"data/fr-en_fr.txt",
+    "tgt_file_path":"data/fr-en_en.txt",
+
     "distributed": false,
     "batch_size": 16,
     "d_model": 512,

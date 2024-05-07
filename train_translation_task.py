@@ -279,6 +279,12 @@ if __name__ == "__main__":
         # print(config)
         if config["distributed"]:
             print("Training in distributed mode")
+        if config["src_file_path"] and config ["tgt_file_path"]:
+            src_file_path = config["src_file_path"]
+            tgt_file_path = config["tgt_file_path"]
+        else:
+            print("Please provide the source and target file paths in the configuration file")
+            exit()
     f.close()
 
     check_file1 = os.path.exists("data_reader.data")
@@ -298,7 +304,7 @@ if __name__ == "__main__":
         print(f"Source: {len(text_data_processor.vocab_src)}")
         print(f"Target: {len(text_data_processor.vocab_tgt)}")
     else:
-        data_reader = DataReader('data/fr-en_fr.txt', 'data/fr-en_en.txt', config["load_data_lines"])
+        data_reader = DataReader(src_file_path, tgt_file_path, config["load_data_lines"])
         text_data_processor = TextDataProcessor.from_DataReader(data_reader)
         vocab_src, vocab_tgt = text_data_processor.build_vocab(src_lang="fr", tgt_lang="en", min_freq=5, random_state=42)
         spacy_src, spacy_tgt = text_data_processor.get_spacy_core(src_lang="fr", tgt_lang="en")
